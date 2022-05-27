@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.technowave.broadcastreciever">
 
-
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,8 +20,9 @@
             </intent-filter>
         </activity>
         <receiver android:name=".MyReceiver"
-            android:exported="true">
-            <intent-filter>
+            android:exported="true"
+            android:permission="android.permission.SEND_SMS">
+            <intent-filter >
                 <action android:name="android.intent.action.AIRPLANE_MODE"/>
                 <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
                 <action android:name="com.technowave.broadcastreciever.MY_BROADCAST" />

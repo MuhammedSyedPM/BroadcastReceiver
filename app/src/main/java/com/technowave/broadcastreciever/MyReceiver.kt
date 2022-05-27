@@ -10,6 +10,7 @@ class MyReceiver : BroadcastReceiver() {
     override fun onReceive(p0: Context?, p1: Intent?) {
         val data = p1?.getStringExtra("mydata")
         Toast.makeText(p0, "Received $data", Toast.LENGTH_LONG).show()
+
     }
 
     companion object {
